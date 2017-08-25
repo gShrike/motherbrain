@@ -70,6 +70,8 @@ Business Units are programs: Denver WDI (1), Boulder WDI (2), etc.
 
 * `/api/v1/performances`
 * `/api/v1/performances/:performance_id`
+* `/api/v1/standards/:standard_id/performances`
+  * `?snapshot=current` -- _only the students current score_
 
 ### Daily Plans
 

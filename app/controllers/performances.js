@@ -13,5 +13,9 @@ module.exports = {
     single: function(request, response){
         Performance.getOne(request.params.performance_id)
         .then(respond.bind(null, request, response));
+    },
+    byStandard: function(request, response){
+        Performance.getByStandard(request.params.standard_id, request.query)
+        .then(respond.bind(null, request, response));
     }
 }
