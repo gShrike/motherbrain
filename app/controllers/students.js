@@ -7,7 +7,7 @@ var Student = require("../models/Student");
 
 module.exports = {
     multiple: function(request, response){
-        Student.getAll()
+        Student.getAll(request.query)
         .then(respond.bind(null, request, response));
     },
     single: function(request, response){

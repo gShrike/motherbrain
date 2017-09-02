@@ -57,6 +57,8 @@ Business Units are programs: Denver WDI (1), Boulder WDI (2), etc.
 ### Students
 
 * `/api/v1/students`
+  * `email=mail@mail.com`
+  * `github=github_username`
 * `/api/v1/students/:student_id`
 * `/api/v1/business-units/:business_unit_id/cohorts/:cohort_id/students`
 * `/api/v1/cohorts/:cohort_id/students`

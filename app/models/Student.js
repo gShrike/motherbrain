@@ -20,9 +20,17 @@ class Student extends Model {
             "galvanize_id"
         ];
     }
-    static getAll(){
-        return this.query()
-            .select(this.columns)
+    static getAll(filters = {}){
+        let query = this.query().select(this.columns)
+
+        if (filters.github) {
+          query = query.where("github_username", filters.github)
+        }
+        if (filters.email) {
+          query = query.where("email", filters.email)
+        }
+
+        return query
     }
     static getOne(id){
         return this.query()
